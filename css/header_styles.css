@@ -1,0 +1,43 @@
+body{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  /*background: #0000007a;*/
+}
+.main-menu{
+  width: 100%;
+  position: relative;
+}
+.inner-menu{
+  padding: 25px 15px;
+  background: #000000b0;
+  color: #fff;
+  height: 25px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('images/navbar-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -9999;
+}
+.logo{
+  position: absolute;
+  left: 50%;
+  top: 25%;
+  content: "";
+  -webkit-transform: translate(-50%);
+}
+.logo img{
+  height: 50px;
+}
+.inner-menu a{
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid #fff;
+  font-weight: 600;
+  text-decoration: none;
+}
+.inner-menu a:hover{
+  color: #000;
+  background-color: #4CAF50;;
+  text-decoration: none;
+}

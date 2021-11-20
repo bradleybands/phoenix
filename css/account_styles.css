@@ -1,0 +1,30 @@
+
+.main{
+  padding-bottom: 10px;
+  border-radius: 15px;
+  margin-top: 50px;
+  opacity: 0.9;
+  width: 700px;
+}
+.info
+{
+    display:inline;
+    background-color:#4542f5;
+    color:#fff;
+    opacity: 0.9;
+    border-radius: 5px;
+}
+.tag
+{
+  padding: 15px;
+  font-weight: 400;
+  font-size: 19px;
+  text-align: right;
+}
+.data
+{
+  padding: 9px;
+  font-weight: 600;
+  font-size: 19px;
+  text-align: left;
+}
