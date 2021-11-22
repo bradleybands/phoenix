@@ -34,7 +34,7 @@
 
 			<input type="submit" name="login" value="Login">
 
-			<h6 class="pt-3">Don't have an Acccount? <a href="register.php">Sign Up</a></h6>
+			<h6 class="pt-3">Don't have an Account? <a href="register.php">Sign Up</a></h6>
 		</form>
 	</div>
 
