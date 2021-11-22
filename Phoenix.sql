@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.1
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 16, 2020 at 09:07 PM
--- Server version: 10.4.8-MariaDB
--- PHP Version: 7.3.11
+-- Generation Time: Nov 22, 2021 at 12:33 PM
+-- Server version: 10.4.21-MariaDB
+-- PHP Version: 8.0.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -19,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `foodie-moodie`
+-- Database: `phoenix`
 --
 
 -- --------------------------------------------------------
@@ -62,23 +61,11 @@ CREATE TABLE `menu` (
 --
 
 INSERT INTO `menu` (`id`, `item_no`, `name`, `type`, `detail`, `price`, `image`) VALUES
-(3, 2, 'Jollof and Salad and Chicken', 'Non-Veg', 'Jollof is rice cooked in tomato stew with a salad dressing with fried chicken.', '15', 'jollof.jpg');
-
-INSERT INTO `menu` (`id`, `item_no`, `name`, `type`, `detail`, `price`, `image`) VALUES
-(5, 3, 'Fried Rice with Chicken', 'Non-Veg', 'Fried Rice is a mixture of rice, soy-sauce and vegetables and minced-meat with grilled chicken on the side.', '35', 'Fried Rice and Chicken.jpg');
-
-INSERT INTO `menu` (`id`, `item_no`, `name`, `type`, `detail`, `price`, `image`) VALUES
-(6, 4, 'Cesar Salad', 'Veg', 'A pure salad combo made up of cabbage, salad leaves, tomatoes and onion rings.', '40', 'Salad.jpg');
-
-INSERT INTO `menu` (`id`, `item_no`, `name`, `type`, `detail`, `price`, `image`) VALUES
-(7, 5, 'Fried Yam and Chicken', 'Non-Veg', 'Fried Yam combined with 3-piece chicken.', '60', 'Fried_yam.jpg');
-
-INSERT INTO `menu` (`id`, `item_no`, `name`, `type`, `detail`, `price`, `image`) VALUES
-(8, 6, 'Rice and Beans Stew', 'Veg', 'Spicy rice dish prepared by cooking rice with beans with palm-nut oil.', '10', 'Rice and Beans.jpg');
-
-INSERT INTO `menu` (`id`, `item_no`, `name`, `type`, `detail`, `price`, `image`) VALUES
+(5, 3, 'Fried Rice with Chicken', 'Non-Veg', 'Fried Rice is a mixture of rice, soy-sauce and vegetables and minced-meat with grilled chicken on the side.', '35', 'Fried Rice and Chicken.jpg'),
+(6, 4, 'Cesar Salad', 'Veg', 'A pure salad combo made up of cabbage, salad leaves, tomatoes and onion rings.', '40', 'Salad.jpg'),
+(7, 5, 'Fried Yam and Chicken', 'Non-Veg', 'Fried Yam combined with 3-piece chicken.', '60', 'Fried_yam.jpg'),
+(8, 6, 'Rice and Beans Stew', 'Veg', 'Spicy rice dish prepared by cooking rice with beans with palm-nut oil.', '10', 'Rice and Beans.jpg'),
 (9, 7, 'Banku and Okro-Stew with salmon', 'Non-Veg', 'Banku served with Okro Stew with fish and minced-meat.', '60', 'Banku_Okro.jpg');
-
 
 -- --------------------------------------------------------
 
@@ -104,17 +91,10 @@ CREATE TABLE `order` (
 --
 
 INSERT INTO `order` (`Id`, `orderId`, `userId`, `itemName`, `price`, `qty`, `total`, `name`, `address`, `email`) VALUES
-(20, 1, 1, 'Jollof and Salad and Chicken', '15', 2, '30', 'Nii Aku', 'Ashongman-Estate GE 1229', 'nii.adjei-aku@ashesi.edu.gh');
-
-INSERT INTO `order` (`Id`, `orderId`, `userId`, `itemName`, `price`, `qty`, `total`, `name`, `address`, `email`) VALUES
-(21, 1, 1, 'Banku and Okro-Stew with salmon', '60', 1, '60', 'Nii Aku', 'Ashongman-Estate GE 1229', 'nii.adjei-aku@ashesi.edu.gh');
-
-INSERT INTO `order` (`Id`, `orderId`, `userId`, `itemName`, `price`, `qty`, `total`, `name`, `address`, `email`) VALUES
-(22, 13, 13, 'Rice and Beans Stew', '15', 1, '25', 'Madoc', 'Flat No. 100, Villagio', 'madoc.quaye@ashesi.edu.gh');
-
-INSERT INTO `order` (`Id`, `orderId`, `userId`, `itemName`, `price`, `qty`, `total`, `name`, `address`, `email`) VALUES
+(20, 1, 1, 'Jollof and Salad and Chicken', '15', 2, '30', 'Nii Aku', 'Ashongman-Estate GE 1229', 'nii.adjei-aku@ashesi.edu.gh'),
+(21, 1, 1, 'Banku and Okro-Stew with salmon', '60', 1, '60', 'Nii Aku', 'Ashongman-Estate GE 1229', 'nii.adjei-aku@ashesi.edu.gh'),
+(22, 13, 13, 'Rice and Beans Stew', '15', 1, '25', 'Madoc', 'Flat No. 100, Villagio', 'madoc.quaye@ashesi.edu.gh'),
 (23, 13, 13, 'Fried Yam and Chicken', '60', 2, '120', 'Amenoracking Amenreynolds', 'Flat No. 127, the Gallery', 'amens321@gmail.com');
-
 
 -- --------------------------------------------------------
 
@@ -137,13 +117,11 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `name`, `mobile`, `address`, `email`, `password`, `cpassword`) VALUES
-(1, 'Nii Aku', '0542490402', 'Ashongman-Estate GE 1229', 'nii.adjei-aku@ashesi.edu.gh', 'niiaku31', 'niiaku31');
+(1, 'Nii Aku', '0542490402', 'Ashongman-Estate GE 1229', 'nii.adjei-aku@ashesi.edu.gh', 'niiaku31', 'niiaku31'),
+(2, 'Amenoracking Amenreynolds', '0275460908', 'Flat No. 127, the Gallery', 'amens321@gmail.com', 'amenandpray12', 'amenandpray12'),
+(3, 'Madoc', '0244123789', 'Flat No. 100, Villagio', 'madoc.quaye@ashesi.edu.gh', 'madman123', 'madman123'),
+(15, 'Bradley Deku', '0264438599', 'Ben 10 Ave', 'bradley.deku@ashesi.edu.gh', 'brad', 'brad');
 
-INSERT INTO `user` (`id`, `name`, `mobile`, `address`, `email`, `password`, `cpassword`) VALUES
-(2, 'Amenoracking Amenreynolds', '0275460908', 'Flat No. 127, the Gallery', 'amens321@gmail.com', 'amenandpray12', 'amenandpray12');
-
-INSERT INTO `user` (`id`, `name`, `mobile`, `address`, `email`, `password`, `cpassword`) VALUES
-(3, 'Madoc', '0244123789', 'Flat No. 100, Villagio', 'madoc.quaye@ashesi.edu.gh', 'madman123', 'madman123');
 --
 -- Indexes for dumped tables
 --
@@ -199,7 +177,7 @@ ALTER TABLE `order`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

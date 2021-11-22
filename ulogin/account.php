@@ -19,11 +19,12 @@
 
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>Account Info</title>
 
 	<link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css">
-	<!-- CSS Styling -->
+
 	<!-- CSS Styling -->
 	<link rel="stylesheet" type="text/css" href="../css/account_styles.css">
 </head>
@@ -32,8 +33,12 @@
 <body>
 
 	<div class="bg-dark pt-3 pb-3">
-		<a href="../index.php"><button type="button" class="btn btn-outline-light ml-3" style="float:left;">HOME</button></a>
-		<a href="../menu/cart.php"><button type="button" class="btn btn-light mr-3" style="float:right;">CART</button></a>
+		<a href="../index.php">
+			<button type="button" class="btn btn-outline-light ml-3" style="float:left;">HOME</button>
+		</a>
+		<a href="../menu/cart.php">
+			<button type="button" class="btn btn-light mr-3" style="float:right;">CART</button>
+		</a>
 		<h1 class="text-center text-light">Phoenix's Order</h1>
 	</div>
 
@@ -45,7 +50,7 @@
 
 		<h1><?php echo "Welcome ".$data['name'] ?></h1>
 
-		<table align="center" >
+		<table align="center">
 			<tr>
 				<td class="tag">Name:</td>
 				<td class="data"><?php echo $data['name'] ?></td>
@@ -74,4 +79,5 @@
 	<script src="bootstrap/jss/popper.min.js"></script>
 	<script src="bootstrap/jss/bootstrap.min.js"></script>
 </body>
+
 </html>

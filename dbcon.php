@@ -6,4 +6,5 @@
 	{
 		echo "Database connection failed";
 	}
+	
 ?>

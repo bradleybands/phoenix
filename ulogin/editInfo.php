@@ -19,12 +19,12 @@
 
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css">
 	<style>
-
-		.main{
+		.main {
 			padding-bottom: 10px;
 			border-radius: 15px;
 			margin-top: 50px;
@@ -33,6 +33,7 @@
 		}
 	</style>
 </head>
+
 <body>
 
 	<div class="bg-dark pt-3 pb-3">
@@ -43,7 +44,7 @@
 
 	<div class="container bg-dark text-light text-center main">
 		<h1 class="pt-4">EDIT INFORMATION</h1>
-		<table align="center" class="mt-5 text-right" >
+		<table align="center" class="mt-5 text-right">
 			<form action="editInfo.php" method="post">
 				<tr>
 					<td>Name</td>
@@ -55,7 +56,7 @@
 				</tr>
 				<tr>
 					<td>Address</td>
-					<td><textarea name="address" style="width: 178px;"  required><?php echo $data['address'] ?></textarea></td>
+					<td><textarea name="address" style="width: 178px;" required><?php echo $data['address'] ?></textarea></td>
 				</tr>
 				<tr>
 					<td colspan="2" align="center">
@@ -73,6 +74,7 @@
 	<script src="bootstrap/jss/bootstrap.min.js"></script>
 
 </body>
+
 </html>
 
 <?php
@@ -91,12 +93,12 @@
 		{
 			?>
 
-			<script>
-				alert("Information Updated Successfully !");
-				window.open('account.php','_self');
-			</script>
+<script>
+	alert("Information Updated Successfully !");
+	window.open('account.php', '_self');
+</script>
 
-			<?php
+<?php
 		}
 		else
 		{

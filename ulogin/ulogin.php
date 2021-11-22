@@ -12,19 +12,21 @@ session_start();
 ?>
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title> Jhatpat Foods </title>
 	<link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css">
 
 	<style>
-		body{
+		body {
 			background-image: url('../images/background.jpeg');
 			background-repeat: no-repeat;
 			background-attachment: fixed;
-   		 	background-position: center;
-    		background-size: cover;
+			background-position: center;
+			background-size: cover;
 		}
-		.main{
+
+		.main {
 			border-radius: 15px;
 			margin-top: 100px;
 			opacity: 0.9;
@@ -32,6 +34,7 @@ session_start();
 		}
 	</style>
 </head>
+
 <body>
 	<div class=" bg-dark pt-3 pb-3">
 		<a href="index.php"><button type="button" class="btn btn-success ml-3" style="float:left;">HOME</button></a>
@@ -59,4 +62,5 @@ session_start();
 	<script src="../bootstrap/jss/bootstrap.min.js"></script>
 
 </body>
+
 </html>

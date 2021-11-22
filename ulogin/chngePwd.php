@@ -14,12 +14,12 @@
 
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css">
 	<style>
-
-		.main{
+		.main {
 			padding-bottom: 10px;
 			border-radius: 15px;
 			margin-top: 50px;
@@ -28,6 +28,7 @@
 		}
 	</style>
 </head>
+
 <body>
 
 	<div class="bg-dark pt-3 pb-3">
@@ -38,23 +39,23 @@
 
 	<div class="container bg-dark text-light text-center main">
 		<h1 class="pt-4">CHANGE PASSWORD</h1>
-		<table align="center" class="mt-5 text-right" >
-			<form  action="chngePwd.php" method="post">
-			<tr>
-				<td>Old Password</td>
-				<td><input type="text" name="oldpwd" placeholder="Old Password" value="" required></td>
-			</tr>
-			<tr>
-				<td>New Password</td>
-				<td><input type="text" name="pwd" placeholder="Password" value="" required></td>
-			</tr>
-			<tr>
-				<td>Confirm Password</td>
-				<td><input type="text" name="cpwd" placeholder="Confirm Password" value="" required></td>
-			</tr>
-			<tr align="center">
-				<td colspan="2"><input type="submit" name="submit" value="Change Password" class="btn btn-primary"></td>
-			</t>
+		<table align="center" class="mt-5 text-right">
+			<form action="chngePwd.php" method="post">
+				<tr>
+					<td>Old Password</td>
+					<td><input type="text" name="oldpwd" placeholder="Old Password" required></td>
+				</tr>
+				<tr>
+					<td>New Password</td>
+					<td><input type="text" name="pwd" placeholder="Password" required></td>
+				</tr>
+				<tr>
+					<td>Confirm Password</td>
+					<td><input type="text" name="cpwd" placeholder="Confirm Password" required></td>
+				</tr>
+				<tr align="center">
+					<td colspan="2"><input type="submit" name="submit" value="Change Password" class="btn btn-primary"></td>
+					</t>
 			</form>
 		</table>
 	</div>
@@ -64,6 +65,7 @@
 	<script src="bootstrap/jss/popper.min.js"></script>
 	<script src="bootstrap/jss/bootstrap.min.js"></script>
 </body>
+
 </html>
 
 <?php
@@ -89,30 +91,29 @@
 				$usql = "UPDATE `user` SET `password` = '$pwd', `cpassword` =  '$cpwd' WHERE `id` = '$uid'";
 				$run = mysqli_query($conn, $usql);
 				?>
-				<script type="text/javascript">
-					alert("Password Changed Successfully! Login Again!!");
-					window.open('../login.php','_self');
-
-				</script>
-				<?php
+<script type="text/javascript">
+	alert("Password Changed Successfully! Login Again!!");
+	window.open('../login.php', '_self');
+</script>
+<?php
 				session_destroy();
 			}
 			else
 			{
 				?>
-				<script type="text/javascript">
-					alert("Password and Confirm Password not match!");
-				</script>
-				<?php
+<script type="text/javascript">
+	alert("Password and Confirm Password not match!");
+</script>
+<?php
 			}
 		}
 		else
 		{
 			?>
-			<script type="text/javascript">
-				alert("Incorrect Current Password!");
-			</script>
-			<?php
+<script type="text/javascript">
+	alert("Incorrect Current Password!");
+</script>
+<?php
 		}
 	}
 ?>

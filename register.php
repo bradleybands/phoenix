@@ -67,8 +67,8 @@
 			die();
 		}
 
-		$esql = "SELECT 1 FROM `user` WHERE `email` = '$email'";
-		$erun = mysqli_query($conn, $esql);
+		$sql_1 = "SELECT 1 FROM `user` WHERE `email` = '$email'";
+		$erun = mysqli_query($conn, $sql_1);
 
 		if (mysqli_num_rows($erun) > 0)
 		{
@@ -80,8 +80,8 @@
 			die();
 		}
 
-		$sql = "INSERT INTO `user`(`name`, `mobile`, `address`, `email`, `password`, `cpassword`) VALUES ('$name', '$mobile', '$address', '$email', '$password', '$cpassword')";
-		$run = mysqli_query($conn, $sql);
+		$sql_2 = "INSERT INTO `user`(`name`, `mobile`, `address`, `email`, `password`, `cpassword`) VALUES ('$name', '$mobile', '$address', '$email', '$password', '$cpassword')";
+		$run = mysqli_query($conn, $sql_2);
 
 		if ($run == true)
 		{
@@ -96,7 +96,7 @@
 		}
 		else
 		{
-    		echo "ERROR: $sql. " . mysqli_error($conn);
+    		echo "ERROR: $sql_2. " . mysqli_error($conn);
 		}
 	}
 ?>

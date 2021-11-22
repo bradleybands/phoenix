@@ -179,7 +179,7 @@
 				<div class="row px-3">
 
 					<div class="col-lg-9 col-md-9 col-9">
-						<h5 style="float: right; color: #482376">Subtotal</h5>
+						<h5 style="float: right; color: #482376">Sub-total</h5>
 					</div>
 
 					<div class="col-lg-3 col-md-3 col-3">

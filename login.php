@@ -28,11 +28,11 @@
 	<div class="wrap">
 		<h2>Login</h2>
 		<form action="login.php" method="post">
-			<input class="" type="email" name="uname" placeholder="Email" value="" required>
+			<input type="email" name="uname" placeholder="Email" required>
 
-			<input class="" type="password" name="pass" placeholder="Password" value="" required>
+			<input type="password" name="pass" placeholder="Password" required>
 
-			<input type="submit" name="login" value="Login" class="">
+			<input type="submit" name="login" value="Login">
 
 			<h6 class="pt-3">Don't have an Acccount? <a href="register.php">Sign Up</a></h6>
 		</form>
