@@ -34,7 +34,7 @@
 
 			<input type="submit" name="submit" value="Register" >
 
-			<h6 class="pt-3">Aleready Have an Acccount? <a href="login.php">Login</a></h6>
+			<h6 class="pt-3">Already Have an Acccount? <a href="login.php">Login</a></h6>
 		</form>
 	</div>
 
@@ -61,7 +61,7 @@
 		{
 			?>
 			<script type="text/javascript">
-				alert("Password and Confirm Password not match!");
+				alert("Passwords do not match!");
 			</script>
 			<?php
 			die();
@@ -74,7 +74,7 @@
 		{
 			?>
 			<script type="text/javascript">
-				alert("Email Aleready Exist!");
+				alert("Email is already associated to another account");
 			</script>
 			<?php
 			die();
@@ -88,7 +88,7 @@
 			?>
 
 			<script>
-				alert("User Registration Successfully !");
+				alert("User Registered Successfully !");
 				window.open('login.php','_self')
 			</script>
 
