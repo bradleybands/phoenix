@@ -129,8 +129,8 @@
 									<h6><?php echo $address; ?></h6>
 								</div>
 								<div class="col-lg-6 col-md-6 col-12">
-									<h6>0264438599</h6>
-									<h6>bradley.deku@ashesi.edu.gh</h6>
+									<h6><?php echo $mobile; ?></h6>
+									<h6><?php echo $email; ?></h6>
 								</div>
 							</div>
 						</div>
