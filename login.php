@@ -63,7 +63,7 @@
 			?>
 
 			<script>
-				alert("Username & Password not match!");
+				alert("Username & Password do not match!");
 				window.open('login.php','_self');
 			</script>
 
