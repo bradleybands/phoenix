@@ -39,7 +39,7 @@ session_start();
 	<div class=" bg-dark pt-3 pb-3">
 		<a href="index.php"><button type="button" class="btn btn-success ml-3" style="float:left;">HOME</button></a>
 		<a href="user.php"><button type="button" class="btn btn-light mr-3" style="float:right;">USER</button></a>
-		<h1 class="text-center text-light">JHATPAT FOODS</h1>
+		<h1 class="text-center text-light">PHOENIX'S ORDER</h1>
 	</div>
 
 	<div class="container bg-dark text-light text-center main">

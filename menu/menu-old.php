@@ -1,21 +1,21 @@
 <?php
 	include('../dbcon.php');
 	session_start();
-	if (isset($_SESSION['uid'])) 
+	if (isset($_SESSION['uid']))
 	{
-		
+
 	}
 	else
 	{
 		header('location: menu_nologin.php');
 	}
-	
+
 	if(isset($_POST['add_to_cart']))
 	{
-		if (isset($_SESSION['cart'])) 
+		if (isset($_SESSION['cart']))
 		{
 			$product_id_array = array_column($_SESSION['cart'], 'product_id');
-			if (in_array($_POST['product_id'], $product_id_array)) 
+			if (in_array($_POST['product_id'], $product_id_array))
 			{
 				echo "<script> alert('Item Already in cart')</script>";
 				echo "<script> window.location='menu.php' </script>";
@@ -33,7 +33,7 @@
 			}
 		}
 		else
-		{	
+		{
 			$product_array = array(
 				'product_id' => $_POST['product_id'],
 				'qty' => $_POST['qty1']
@@ -62,12 +62,12 @@
 
 	<div class=" bg-dark pt-2 pb-1 sticky-top">
 		<a href="../ulogin/index.php"><button type="button" class="btn btn-success ml-3" style="float:left;">HOME</button></a>
-		<?php 
-			// $count = count($_SESSION['cart']); 
-		?>
-		<a href="cart.php"><button type="button" class="btn btn-danger mr-3" style="float:right;">CART 
 		<?php
-		if (isset($_SESSION['cart'])) 
+			// $count = count($_SESSION['cart']);
+		?>
+		<a href="cart.php"><button type="button" class="btn btn-danger mr-3" style="float:right;">CART
+		<?php
+		if (isset($_SESSION['cart']))
 		{
 			$count = count($_SESSION['cart']);
 			echo "<span><b>$count</b></span>";
@@ -86,7 +86,7 @@
 				<div class="shopping-cart pt-3">
 					<h6>MENU</h6>
 					<hr>
-		<?php 
+		<?php
 			$query = "SELECT * FROM `menu`";
 			$run = mysqli_query($conn, $query);
 
@@ -98,7 +98,7 @@
 			{
 				$qty = 0;
 
-				while ($data = mysqli_fetch_assoc($run)) 
+				while ($data = mysqli_fetch_assoc($run))
 				{
 					$qty++;
 					?>
@@ -112,10 +112,10 @@
 									<div>
 										<h3 class="text-uppercase pt-2"><?php echo $data['name']; ?></h3>
 									</div>
-							
+
 									<div>
 										<?php
-											if ($data['type'] == "Veg" || $data['type'] == "veg") 
+											if ($data['type'] == "Veg" || $data['type'] == "veg")
 											{
 												?><p class="font-weight-bold text-success"> <?php echo $data['type']; ?></p><?php
 											}
@@ -151,10 +151,20 @@
 			</div>
 		</div>
 	</div>
-		
+
 
 	<script src="../bootstrap/jss/jquery.min.js"></script>
 	<script src="../bootstrap/jss/popper.min.js"></script>
 	<script src="../bootstrap/jss/bootstrap.min.js"></script>
+
+	<!-- Start of LiveChat (www.livechatinc.com) code -->
+<script>
+    window.__lc = window.__lc || {};
+    window.__lc.license = 13303971;
+    ;(function(n,t,c){function i(n){return e._h?e._h.apply(null,n):e._q.push(n)}var e={_q:[],_h:null,_v:"2.0",on:function(){i(["on",c.call(arguments)])},once:function(){i(["once",c.call(arguments)])},off:function(){i(["off",c.call(arguments)])},get:function(){if(!e._h)throw new Error("[LiveChatWidget] You can't use getters before load.");return i(["get",c.call(arguments)])},call:function(){i(["call",c.call(arguments)])},init:function(){var n=t.createElement("script");n.async=!0,n.type="text/javascript",n.src="https://cdn.livechatinc.com/tracking.js",t.head.appendChild(n)}};!n.__lc.asyncInit&&e.init(),n.LiveChatWidget=n.LiveChatWidget||e}(window,document,[].slice))
+</script>
+<noscript><a href="https://www.livechatinc.com/chat-with/13303971/" rel="nofollow">Chat with us</a>, powered by <a href="https://www.livechatinc.com/?welcome" rel="noopener nofollow" target="_blank">LiveChat</a></noscript>
+<!-- End of LiveChat code -->
+
 </body>
 </html>
