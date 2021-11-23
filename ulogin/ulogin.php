@@ -14,7 +14,7 @@ session_start();
 <html>
 
 <head>
-	<title> Jhatpat Foods </title>
+	<title> Phoenix's Order </title>
 	<link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css">
 
 	<style>

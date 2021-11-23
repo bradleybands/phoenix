@@ -1,8 +1,8 @@
 <?php
-	
+
 	session_start();
 
-	if (isset($_SESSION['aid'])) 
+	if (isset($_SESSION['aid']))
 	{
 		header('location: admindash.php');
 	}
@@ -12,7 +12,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title> Jhatpat Foods/Login </title>
+	<title> Phoenix's Order/Login </title>
 	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
 </head>
 <body>
@@ -20,7 +20,7 @@
 	<div class=" bg-dark pt-3 pb-3">
 		<a href="../index.php"><button type="button" class="btn btn-success ml-3" style="float:right;">HOME</button></a>
 		<a href="../login.php"><button type="button" class="btn btn-danger mr-3" style="float:left;"><< Back</button></a>
-		<h1 class="text-center text-light">JHATPAT FOODS</h1>
+		<h1 class="text-center text-light">PHOENIX'S ORDER</h1>
 	</div>
 	<div class="mt-5 bg-info container text-center text-white">
 		<h1>ADMIN LOGIN</h1>
@@ -53,10 +53,10 @@
 </html>
 
 <?php
-	
+
 	include('../dbcon.php');
 
-	if (isset($_POST['login'])) 
+	if (isset($_POST['login']))
 	{
 		$uname = $_POST['uname'];
 		$pass = $_POST['pass'];
@@ -78,12 +78,12 @@
 		{
 			$data = mysqli_fetch_assoc($run);
 
-			$id = $data['id']; 
+			$id = $data['id'];
 
 			$_SESSION['aid'] = $id;
 
 			header('location: admindash.php');
 		}
 	}
-	
+
 ?>
