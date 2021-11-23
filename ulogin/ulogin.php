@@ -47,9 +47,9 @@ session_start();
 		<h4>Please select any one:</h4>
 
 		<div>
-			<a href="../menu/menu.php"><button type="button" class="btn btn-primary my-3 px-5">Vashi</button></a><br>
-			<a href="../menu/menu.php"><button type="button" class="btn btn-primary my-3 px-5">Panvel</button></a><br>
-			<a href="../menu/menu.php"><button type="button" class="btn btn-primary my-3 px-5">Thane</button></a><br>
+			<a href="../menu/menu.php"><button type="button" class="btn btn-primary my-3 px-5">Accra</button></a><br>
+			<a href="../menu/menu.php"><button type="button" class="btn btn-primary my-3 px-5">Berekuso</button></a><br>
+			<a href="../menu/menu.php"><button type="button" class="btn btn-primary my-3 px-5">Kumasi</button></a><br>
 		</div>
 	</div>
 
